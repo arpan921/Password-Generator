@@ -28,5 +28,8 @@ def generate_password():
         password = random_letters+random_numbers+random_symbols
 
         final_password = ''.join(randomize_characters(password))
-        return final_password
+        return final_password, len(final_password)
+tuple = generate_password()
+
+print(tuple)
 
