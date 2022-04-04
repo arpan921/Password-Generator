@@ -37,6 +37,3 @@ def generate_password():
         final_password = ''.join(randomize_characters(password))
         print(f"Your password is {final_password}")
 
-
-
-generate_password()
