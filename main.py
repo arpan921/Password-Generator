@@ -12,25 +12,28 @@ nr_letters= int(input("How many letters would you like in your password?\n"))
 nr_symbols = int(input(f"How many symbols would you like?\n"))
 nr_numbers = int(input(f"How many numbers would you like?\n"))
 
+if nr_letters<0 or nr_numbers<0 or nr_symbols<0:
+    print("The above parameters should be positive.")
 
-choice = random.randint(1,3)
-password=""
-number_of_letters=0
-number_of_symbols=0
-number_of_numbers=0
+else:
+    choice = random.randint(1,3)
+    password=""
+    number_of_letters=0
+    number_of_symbols=0
+    number_of_numbers=0
 
-random_letters=[]
-random_numbers=[]
-random_symbols=[]
+    random_letters=[]
+    random_numbers=[]
+    random_symbols=[]
 
-random_letters=make_random_list(letters,nr_letters)
-random_numbers=make_random_list(numbers,nr_numbers)
-random_symbols=make_random_list(symbols,nr_symbols)
+    random_letters=make_random_list(letters,nr_letters)
+    random_numbers=make_random_list(numbers,nr_numbers)
+    random_symbols=make_random_list(symbols,nr_symbols)
 
-password = random_letters+random_numbers+random_symbols
+    password = random_letters+random_numbers+random_symbols
 
-final_password = ''.join(randomize_characters(password))
-print(f"Your password is {final_password}")
+    final_password = ''.join(randomize_characters(password))
+    print(f"Your password is {final_password}")
 
 
 
