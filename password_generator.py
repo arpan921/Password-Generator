@@ -20,14 +20,7 @@ def generate_password():
     else:
         choice = random.randint(1,3)
         password=""
-        number_of_letters=0
-        number_of_symbols=0
-        number_of_numbers=0
-
-        random_letters=[]
-        random_numbers=[]
-        random_symbols=[]
-
+        
         random_letters=make_random_list(letters,nr_letters)
         random_numbers=make_random_list(numbers,nr_numbers)
         random_symbols=make_random_list(symbols,nr_symbols)
