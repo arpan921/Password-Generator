@@ -11,21 +11,21 @@ def make_random_list(list_of_characters,number_of_allowed_char):
     return return_list
 
 def randomize_characters(character_list):
-    final_password = []
+    final_result = []
     length = len(character_list)
     for i in range(length):
-        final_password.insert(i,'..')
+        final_result.insert(i,'..')
 
     for i in range(length):
         position = random.randint(0,length-1)
-        if final_password[position]=='..':
-            final_password[position]=character_list[i]
+        if final_result[position]=='..':
+            final_result[position]=character_list[i]
         else:
-            while(final_password[position]!='..'):
+            while(final_result[position]!='..'):
                 position = random.randint(0,length-1)
-            final_password[position]=character_list[i]
+            final_result[position]=character_list[i]
 
-    return final_password
+    return final_result
             
 
 
